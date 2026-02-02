@@ -117,11 +117,13 @@ export default defineConfig({
       },
     },
 
-    socialLinks: [{ icon: "github", link: "https://github.com" }],
+    socialLinks: [
+      { icon: "github", link: "https://github.com/RainSunMe/eslint-intl" },
+    ],
 
     // 编辑链接
     editLink: {
-      pattern: "https://github.com/your-repo/edit/main/docs/:path",
+      pattern: "https://github.com/RainSunMe/eslint-intl/edit/main/docs/:path",
     },
 
     // 自定义页脚
