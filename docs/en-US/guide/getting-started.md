@@ -15,6 +15,15 @@ ESLint Intl is a VS Code extension that uses AI to translate ESLint error messag
 - ⚡ **Instant Response** - No waiting, translations appear immediately
 - 🎨 **Beautiful UI** - Native VS Code styling integration
 
+## Prerequisites
+
+Before installing ESLint Intl, make sure:
+
+1. ✅ ESLint is configured in your project
+2. ✅ [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) is installed
+
+> ⚠️ **Important**: ESLint Intl depends on the ESLint extension for diagnostic information. The plugin will not work without the ESLint extension installed.
+
 ## Installation
 
 ### Via VS Code Marketplace
@@ -22,6 +31,7 @@ ESLint Intl is a VS Code extension that uses AI to translate ESLint error messag
 1. Open VS Code Extensions Marketplace
 2. Search for "ESLint Intl"
 3. Click the "Install" button
+4. VS Code will automatically install the ESLint extension if not already installed
 
 ### Manual Installation
 

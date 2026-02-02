@@ -22,6 +22,9 @@
   ],
   "main": "./out/extension.js",
   "l10n": "./l10n",
+  "extensionDependencies": [
+    "dbaeumer.vscode-eslint"
+  ],
   "contributes": {
     "configuration": {
       "title": "ESLint Intl",

@@ -42,6 +42,12 @@
 
 ## 📦 快速开始
 
+### 前置要求
+
+> ⚠️ **重要**: 本扩展需要先安装 [ESLint 官方扩展](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
+确保你的项目中已经配置了 ESLint，并且安装了 VS Code 的 ESLint 扩展。
+
 ### 第一步：安装扩展
 
 在 VS Code 扩展市场搜索 "ESLint Intl" 并安装，或直接点击安装按钮。

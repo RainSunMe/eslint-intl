@@ -14,6 +14,15 @@ ESLint Intl 是一个 VS Code 扩展，使用 AI 技术将 ESLint 错误消息�
 - 🔧 **灵活配置** - 支持任何 OpenAI 兼容的 API
 - ⚡ **即时响应** - 无需等待，立即显示翻译
 
+## 前置要求
+
+在安装 ESLint Intl 之前，请确保：
+
+1. ✅ 你的项目中已经配置了 ESLint
+2. ✅ 已安装 [ESLint 官方扩展](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
+> ⚠️ **重要**: ESLint Intl 依赖于 ESLint 扩展提供的错误诊断信息。如果没有安装 ESLint 扩展，本插件将无法工作。
+
 ## 安装
 
 ### 通过 VS Code Marketplace
@@ -21,6 +30,7 @@ ESLint Intl 是一个 VS Code 扩展，使用 AI 技术将 ESLint 错误消息�
 1. 打开 VS Code 扩展市场
 2. 搜索 "ESLint Intl"
 3. 点击"安装"按钮
+4. VS Code 会自动安装 ESLint 扩展（如果尚未安装）
 
 ### 手动安装
 
