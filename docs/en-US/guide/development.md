@@ -52,7 +52,7 @@ src/
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/xxx/eslint-intl.git
+git clone https://github.com/RainSunMe/eslint-intl.git
 cd eslint-intl
 
 # 2. Install dependencies
@@ -248,8 +248,8 @@ Before submitting PR:
 ## Getting Help
 
 - 📖 Check existing code and comments
-- 🐛 [Submit an Issue](https://github.com)
-- 💬 [Join the Discussion](https://github.com)
+- 🐛 [Submit an Issue](https://github.com/RainSunMe/eslint-intl/issues)
+- 💬 [Join the Discussion](https://github.com/RainSunMe/eslint-intl/discussions)
 - 📧 Contact maintainer
 
 ---

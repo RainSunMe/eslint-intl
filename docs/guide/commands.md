@@ -233,5 +233,5 @@ ESLint Intl:
 ## 需要帮助？
 
 - 📖 查看 [基本用法](/guide/usage)
-- 🐛 [提交 Issue](https://github.com)
-- 💬 [参与讨论](https://github.com)
+- 🐛 [提交 Issue](https://github.com/RainSunMe/eslint-intl/issues)
+- 💬 [参与讨论](https://github.com/RainSunMe/eslint-intl/discussions)

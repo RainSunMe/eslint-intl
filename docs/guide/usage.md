@@ -222,4 +222,4 @@ ESLint Intl: Show Output Log
 
 - 📖 查看 [常见问题](/guide/faq)
 - 🔧 查看 [配置指南](/guide/configuration)
-- 🐛 [提交 Issue](https://github.com)
+- 🐛 [提交 Issue](https://github.com/RainSunMe/eslint-intl/issues)

@@ -142,5 +142,5 @@ ESLint Intl: Clear Translation Cache
 ## Need Help?
 
 - 📖 Check [FAQ](/en-US/guide/faq)
-- 🐛 [Submit an Issue](https://github.com)
+- 🐛 [Submit an Issue](https://github.com/RainSunMe/eslint-intl/issues)
 - 📧 Contact support

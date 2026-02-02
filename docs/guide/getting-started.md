@@ -24,7 +24,7 @@ ESLint Intl 是一个 VS Code 扩展，使用 AI 技术将 ESLint 错误消息�
 
 ### 手动安装
 
-1. 从 [GitHub Releases](https://github.com) 下载 `.vsix` 文件
+1. 从 [GitHub Releases](https://github.com/RainSunMe/eslint-intl/releases) 下载 `.vsix` 文件
 2. 在 VS Code 中按 `Ctrl+Shift+X` (Windows/Linux) 或 `Cmd+Shift+X` (Mac) 打开扩展面板
 3. 点击右上角的 `...` 菜单，选择"从 VSIX 安装"
 4. 选择下载的文件
@@ -103,8 +103,8 @@ const x = 1;
 ## 需要帮助？
 
 - 📱 检查 [常见问题](/guide/faq)
-- 🐛 [提交 Issue](https://github.com)
-- 💬 [讨论](https://github.com)
+- 🐛 [提交 Issue](https://github.com/RainSunMe/eslint-intl/issues)
+- 💬 [讨论](https://github.com/RainSunMe/eslint-intl/discussions)
 
 ---
 

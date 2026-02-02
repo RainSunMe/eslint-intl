@@ -138,5 +138,5 @@ ESLint Intl: Clear Translation Cache
 ## 需要幫助？
 
 - 📖 查看 [常見問題](/zh-TW/guide/faq)
-- 🐛 [提交 Issue](https://github.com)
+- 🐛 [提交 Issue](https://github.com/RainSunMe/eslint-intl/issues)
 - 📧 聯繫支援

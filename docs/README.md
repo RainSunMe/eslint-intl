@@ -181,7 +181,7 @@ VitePress 默认提供本地搜索。搜索索引在构建时自动生成。
 ## 反馈和贡献
 
 - 📖 [查看在线文档](https://docs.example.com)
-- 🐛 [提交 Issue](https://github.com)
+- 🐛 [提交 Issue](https://github.com/RainSunMe/eslint-intl/issues)
 - 🤝 欢迎贡献和改进建议
 
 ## 许可证

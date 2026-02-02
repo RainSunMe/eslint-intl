@@ -107,7 +107,7 @@
 
 3. **更换 API**: 尝试不同的 API 提供商
 
-4. **反馈**: [提交 Issue](https://github.com) 报告具体问题
+4. **反馈**: [提交 Issue](https://github.com/RainSunMe/eslint-intl/issues) 报告具体问题
 
 ### Q: 如何显示原始英文错误？
 
@@ -210,7 +210,7 @@ ESLint Intl 目前支持 10 种语言:
 
 **A:**
 
-[提交 Issue](https://github.com) 并:
+[提交 Issue](https://github.com/RainSunMe/eslint-intl/issues) 并:
 
 1. 指定所需的语言
 2. 提供语言代码 (ISO 639-1)
@@ -228,7 +228,7 @@ ESLint Intl 目前支持 10 种语言:
 2. 适当的字体支持
 3. 系统语言设置
 
-如果显示有问题，[提交 Issue](https://github.com)。
+如果显示有问题，[提交 Issue](https://github.com/RainSunMe/eslint-intl/issues)。
 
 ## 错误和故障排除
 
@@ -267,7 +267,7 @@ ESLint Intl 目前支持 10 种语言:
 2. 重启 VS Code
 3. 禁用然后重新启用扩展
 4. 清除缓存
-5. 如果问题持续，[提交 Issue](https://github.com)
+5. 如果问题持续，[提交 Issue](https://github.com/RainSunMe/eslint-intl/issues)
 
 ## 隐私和安全
 
@@ -317,9 +317,9 @@ ESLint Intl 目前支持 10 种语言:
 
 ## 还有问题？
 
-- 🔍 搜索现有 [Issues](https://github.com)
-- 🐛 [提交新 Issue](https://github.com)
-- 💬 [参与讨论](https://github.com)
+- 🔍 搜索现有 [Issues](https://github.com/RainSunMe/eslint-intl/issues)
+- 🐛 [提交新 Issue](https://github.com/RainSunMe/eslint-intl/issues/new)
+- 💬 [参与讨论](https://github.com/RainSunMe/eslint-intl/discussions)
 - 📧 联系维护者
 
 ---

@@ -16,7 +16,7 @@
 
 ### 方式 2: 手動安裝 VSIX 檔案
 
-1. 從 [GitHub Releases](https://github.com) 下載最新的 `.vsix` 檔案
+1. 從 [GitHub Releases](https://github.com/RainSunMe/eslint-intl/releases) 下載最新的 `.vsix` 檔案
 2. 在 VS Code 中：
    - 按 `Ctrl+Shift+X` 打開擴充套件面板
    - 點擊右上角的 `...` 選單
@@ -135,7 +135,7 @@ code --uninstall-extension mimo.eslint-intl
 
 ```bash
 # 複製倉庫
-git clone https://github.com/xxx/eslint-intl.git
+git clone https://github.com/RainSunMe/eslint-intl.git
 cd eslint-intl
 
 # 安裝依賴
@@ -152,5 +152,5 @@ code --install-extension eslint-intl-*.vsix
 ## 需要幫助？
 
 - 📖 查看 [常見問題](/zh-TW/guide/faq)
-- 🐛 [提交 Issue](https://github.com)
-- 💬 [參與討論](https://github.com)
+- 🐛 [提交 Issue](https://github.com/RainSunMe/eslint-intl/issues)
+- 💬 [參與討論](https://github.com/RainSunMe/eslint-intl/discussions)

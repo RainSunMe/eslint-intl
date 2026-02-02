@@ -5,6 +5,11 @@
   "version": "0.1.0",
   "publisher": "mimo",
   "icon": "logo.png",
+  "homepage": "https://eslint-intl.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RainSunMe/eslint-intl.git"
+  },
   "engines": {
     "vscode": "^1.85.0"
   },

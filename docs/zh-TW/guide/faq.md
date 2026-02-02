@@ -73,7 +73,7 @@
 
 2. **清除快取**: 運行 `ESLint Intl: Clear Translation Cache`
 
-3. **反饋**: [提交 Issue](https://github.com) 報告具體問題
+3. **反饋**: [提交 Issue](https://github.com/RainSunMe/eslint-intl/issues) 報告具體問題
 
 ## 快取和效能
 
@@ -123,7 +123,7 @@ ESLint Intl 目前支援 10 種語言:
 
 **A:**
 
-[提交 Issue](https://github.com) 並:
+[提交 Issue](https://github.com/RainSunMe/eslint-intl/issues) 並:
 
 1. 指定所需的語言
 2. 提供語言代碼 (ISO 639-1)
@@ -156,7 +156,7 @@ ESLint Intl 目前支援 10 種語言:
 2. 重啟 VS Code
 3. 禁用然後重新啟用擴充套件
 4. 清除快取
-5. 如果問題持續，[提交 Issue](https://github.com)
+5. 如果問題持續，[提交 Issue](https://github.com/RainSunMe/eslint-intl/issues)
 
 ## 隱私和安全
 
@@ -188,9 +188,9 @@ ESLint Intl 目前支援 10 種語言:
 
 ## 還有問題？
 
-- 🔍 搜尋現有 [Issues](https://github.com)
-- 🐛 [提交新 Issue](https://github.com)
-- 💬 [參與討論](https://github.com)
+- 🔍 搜尋現有 [Issues](https://github.com/RainSunMe/eslint-intl/issues)
+- 🐛 [提交新 Issue](https://github.com/RainSunMe/eslint-intl/issues/new)
+- 💬 [參與討論](https://github.com/RainSunMe/eslint-intl/discussions)
 
 ---
 

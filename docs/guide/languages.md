@@ -183,7 +183,7 @@ ESLint Intl 支持 10 种语言，并且可以轻松扩展以支持更多语言�
 
 ### Q: 我想使用的语言不在列表中怎么办？
 
-请 [提交 Issue](https://github.com) 请求添加新语言。
+请 [提交 Issue](https://github.com/RainSunMe/eslint-intl/issues) 请求添加新语言。
 
 ### Q: 翻译显示不正确或有乱码？
 
@@ -202,5 +202,5 @@ ESLint Intl 支持 10 种语言，并且可以轻松扩展以支持更多语言�
 ## 需要帮助？
 
 - 📖 查看 [配置指南](/guide/configuration)
-- 🐛 [提交 Issue](https://github.com)
-- 💬 [参与讨论](https://github.com)
+- 🐛 [提交 Issue](https://github.com/RainSunMe/eslint-intl/issues)
+- 💬 [参与讨论](https://github.com/RainSunMe/eslint-intl/discussions)

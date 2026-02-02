@@ -288,5 +288,5 @@ vscode.commands.executeCommand("eslintIntl.clearCache");
 ## 需要帮助？
 
 - 📖 查看 [常见问题](/guide/faq)
-- 🐛 [提交 Issue](https://github.com)
+- 🐛 [提交 Issue](https://github.com/RainSunMe/eslint-intl/issues)
 - 📧 联系支持

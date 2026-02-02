@@ -175,7 +175,7 @@ Switch languages manually when needed using Command Palette
 
 ### Q: My language is not listed, what can I do?
 
-Please [submit an Issue](https://github.com) requesting support for your language.
+Please [submit an Issue](https://github.com/RainSunMe/eslint-intl/issues) requesting support for your language.
 
 ### Q: Translation shows incorrectly or has garbled characters?
 
@@ -194,5 +194,5 @@ Not directly, but you can configure workspaces with different languages.
 ## Need Help?
 
 - 📖 See [Configuration Guide](/en-US/guide/configuration)
-- 🐛 [Submit an Issue](https://github.com)
-- 💬 [Join the Discussion](https://github.com)
+- 🐛 [Submit an Issue](https://github.com/RainSunMe/eslint-intl/issues)
+- 💬 [Join the Discussion](https://github.com/RainSunMe/eslint-intl/discussions)

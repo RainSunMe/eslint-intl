@@ -165,4 +165,4 @@ Cache status information is displayed in the output log.
 
 - 📖 Check [FAQ](/en-US/guide/faq)
 - 🔧 See [Configuration Guide](/en-US/guide/configuration)
-- 🐛 [Submit an Issue](https://github.com)
+- 🐛 [Submit an Issue](https://github.com/RainSunMe/eslint-intl/issues)

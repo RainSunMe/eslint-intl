@@ -156,5 +156,5 @@ Set custom shortcuts in `keybindings.json`:
 ## Need Help?
 
 - 📖 See [Basic Usage](/en-US/guide/usage)
-- 🐛 [Submit an Issue](https://github.com)
-- 💬 [Join the Discussion](https://github.com)
+- 🐛 [Submit an Issue](https://github.com/RainSunMe/eslint-intl/issues)
+- 💬 [Join the Discussion](https://github.com/RainSunMe/eslint-intl/discussions)

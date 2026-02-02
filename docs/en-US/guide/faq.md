@@ -133,7 +133,7 @@ ESLint Intl supports 10 languages:
 
 **A:**
 
-[Submit an Issue](https://github.com) and:
+[Submit an Issue](https://github.com/RainSunMe/eslint-intl/issues) and:
 
 1. Specify desired language
 2. Provide ISO 639-1 code
@@ -167,7 +167,7 @@ ESLint Intl supports 10 languages:
 2. Restart VS Code
 3. Disable then re-enable extension
 4. Clear cache
-5. [Submit Issue](https://github.com) if persists
+5. [Submit Issue](https://github.com/RainSunMe/eslint-intl/issues) if persists
 
 ## Privacy and Security
 
@@ -217,9 +217,9 @@ Yes, MIT license allows commercial use.
 
 ## Still Have Questions?
 
-- 🔍 Search existing [Issues](https://github.com)
-- 🐛 [Submit new Issue](https://github.com)
-- 💬 [Join Discussion](https://github.com)
+- 🔍 Search existing [Issues](https://github.com/RainSunMe/eslint-intl/issues)
+- 🐛 [Submit new Issue](https://github.com/RainSunMe/eslint-intl/issues/new)
+- 💬 [Join Discussion](https://github.com/RainSunMe/eslint-intl/discussions)
 - 📧 Contact maintainer
 
 ---

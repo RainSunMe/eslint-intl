@@ -14,7 +14,7 @@ hero:
       link: /en-US/guide/getting-started
     - theme: alt
       text: View on GitHub
-      link: https://github.com
+      link: https://github.com/RainSunMe/eslint-intl
 
 features:
   - icon: 🌍

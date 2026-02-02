@@ -16,7 +16,7 @@
 
 ### Method 2: Manual VSIX Installation
 
-1. Download the latest `.vsix` file from [GitHub Releases](https://github.com)
+1. Download the latest `.vsix` file from [GitHub Releases](https://github.com/RainSunMe/eslint-intl/releases)
 2. In VS Code:
    - Press `Ctrl+Shift+X` to open Extensions
    - Click the `...` menu in the top right
@@ -135,7 +135,7 @@ To install the development version or build from source:
 
 ```bash
 # Clone repository
-git clone https://github.com/xxx/eslint-intl.git
+git clone https://github.com/RainSunMe/eslint-intl.git
 cd eslint-intl
 
 # Install dependencies
@@ -152,5 +152,5 @@ code --install-extension eslint-intl-*.vsix
 ## Need Help?
 
 - 📖 Check [FAQ](/en-US/guide/faq)
-- 🐛 [Submit an Issue](https://github.com)
-- 💬 [Join the Discussion](https://github.com)
+- 🐛 [Submit an Issue](https://github.com/RainSunMe/eslint-intl/issues)
+- 💬 [Join the Discussion](https://github.com/RainSunMe/eslint-intl/discussions)

@@ -76,4 +76,4 @@ await vscode.commands.executeCommand("eslintIntl.showOutput");
 ## 需要幫助？
 
 - 📖 查看 [基本用法](/zh-TW/guide/usage)
-- 🐛 [提交 Issue](https://github.com)
+- 🐛 [提交 Issue](https://github.com/RainSunMe/eslint-intl/issues)

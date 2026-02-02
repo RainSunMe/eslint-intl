@@ -52,7 +52,7 @@ src/
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/xxx/eslint-intl.git
+git clone https://github.com/RainSunMe/eslint-intl.git
 cd eslint-intl
 
 # 2. 安装依赖
@@ -335,8 +335,8 @@ console.log(JSON.stringify(cached, null, 2));
 ## 获取帮助
 
 - 📖 查看现有代码和注释
-- 🐛 [提交 Issue](https://github.com)
-- 💬 [参与讨论](https://github.com)
+- 🐛 [提交 Issue](https://github.com/RainSunMe/eslint-intl/issues)
+- 💬 [参与讨论](https://github.com/RainSunMe/eslint-intl/discussions)
 - 📧 联系维护者
 
 ---

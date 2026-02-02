@@ -25,7 +25,7 @@ src/
 
 ```bash
 # 1. 複製倉庫
-git clone https://github.com/xxx/eslint-intl.git
+git clone https://github.com/RainSunMe/eslint-intl.git
 cd eslint-intl
 
 # 2. 安裝依賴
@@ -106,8 +106,8 @@ logError("Failed to fetch: " + error.message);
 ## 獲取幫助
 
 - 📖 查看現有代碼和註釋
-- 🐛 [提交 Issue](https://github.com)
-- 💬 [參與討論](https://github.com)
+- 🐛 [提交 Issue](https://github.com/RainSunMe/eslint-intl/issues)
+- 💬 [參與討論](https://github.com/RainSunMe/eslint-intl/discussions)
 - 📧 聯繫維護者
 
 ---

@@ -83,5 +83,5 @@ ESLint Intl 支援 10 種語言，並且可以輕鬆擴展以支援更多語言�
 ## 需要幫助？
 
 - 📖 查看 [配置指南](/zh-TW/guide/configuration)
-- 🐛 [提交 Issue](https://github.com)
-- 💬 [參與討論](https://github.com)
+- 🐛 [提交 Issue](https://github.com/RainSunMe/eslint-intl/issues)
+- 💬 [參與討論](https://github.com/RainSunMe/eslint-intl/discussions)

@@ -25,7 +25,7 @@ ESLint Intl is a VS Code extension that uses AI to translate ESLint error messag
 
 ### Manual Installation
 
-1. Download the latest `.vsix` file from [GitHub Releases](https://github.com)
+1. Download the latest `.vsix` file from [GitHub Releases](https://github.com/RainSunMe/eslint-intl/releases)
 2. Open VS Code and press `Ctrl+Shift+X` (Windows/Linux) or `Cmd+Shift+X` (Mac)
 3. Click the `...` menu in the top right and select "Install from VSIX..."
 4. Select the downloaded file
@@ -104,8 +104,8 @@ Variable 'x' is assigned a value but never used.
 ## Need Help?
 
 - 📱 Check [FAQ](/en-US/guide/faq)
-- 🐛 [Submit an Issue](https://github.com)
-- 💬 [Join the Discussion](https://github.com)
+- 🐛 [Submit an Issue](https://github.com/RainSunMe/eslint-intl/issues)
+- 💬 [Join the Discussion](https://github.com/RainSunMe/eslint-intl/discussions)
 
 ---
 
