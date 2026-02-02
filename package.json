@@ -1,0 +1,132 @@
+{
+  "name": "eslint-intl",
+  "displayName": "ESLint Intl - AI Translator",
+  "description": "AI-powered internationalization for ESLint error messages",
+  "version": "0.1.0",
+  "publisher": "mimo",
+  "icon": "logo.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Linters",
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "l10n": "./l10n",
+  "contributes": {
+    "configuration": {
+      "title": "ESLint Intl",
+      "properties": {
+        "eslintIntl.openai.baseUrl": {
+          "type": "string",
+          "default": "https://api.openai.com/v1",
+          "description": "%config.baseUrl%"
+        },
+        "eslintIntl.openai.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "%config.apiKey%"
+        },
+        "eslintIntl.openai.model": {
+          "type": "string",
+          "default": "gpt-4o-mini",
+          "description": "%config.model%"
+        },
+        "eslintIntl.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "%config.enabled%"
+        },
+        "eslintIntl.targetLanguage": {
+          "type": "string",
+          "default": "zh-CN",
+          "enum": [
+            "zh-CN",
+            "zh-TW",
+            "ko",
+            "de",
+            "fr",
+            "es",
+            "ru",
+            "pt",
+            "it",
+            "ar"
+          ],
+          "enumDescriptions": [
+            "简体中文",
+            "繁體中文",
+            "한국어",
+            "Deutsch",
+            "Français",
+            "Español",
+            "Русский",
+            "Português",
+            "Italiano",
+            "العربية"
+          ],
+          "description": "%config.targetLanguage%",
+          "markdownEnumDescriptions": [
+            "%lang.zh-CN%",
+            "%lang.zh-TW%",
+            "%lang.ko%",
+            "%lang.de%",
+            "%lang.fr%",
+            "%lang.es%",
+            "%lang.ru%",
+            "%lang.pt%",
+            "%lang.it%",
+            "%lang.ar%"
+          ]
+        },
+        "eslintIntl.showOriginal": {
+          "type": "boolean",
+          "default": false,
+          "description": "%config.showOriginal%"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "eslintIntl.clearCache",
+        "title": "%command.clearCache%",
+        "category": "ESLint Intl"
+      },
+      {
+        "command": "eslintIntl.toggleEnabled",
+        "title": "%command.toggleEnabled%",
+        "category": "ESLint Intl"
+      },
+      {
+        "command": "eslintIntl.showOutput",
+        "title": "%command.showOutput%",
+        "category": "ESLint Intl"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts",
+    "docs:dev": "vitepress dev docs --host",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "eslint": "^8.54.0",
+    "typescript": "^5.3.0",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.27"
+  },
+  "dependencies": {
+    "@vscode/l10n": "^0.0.18"
+  }
+}

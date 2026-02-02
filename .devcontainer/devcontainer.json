@@ -1,0 +1,45 @@
+{
+  "name": "eslint-intl-vsix",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:20",
+  "remoteUser": "node",
+  "containerUser": "node",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "jock.svg",
+        "eamodio.gitlens",
+        "hediet.vscode-drawio",
+        "unifiedjs.vscode-mdx",
+        "Gruntfuggly.todo-tree",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "stylelint.vscode-stylelint",
+        "streetsidesoftware.code-spell-checker",
+        "MS-CEINTL.vscode-language-pack-zh-hans",
+        "svelte.svelte-vscode",
+        "bradlc.vscode-tailwindcss",
+        "GitHub.copilot-chat",
+        "lokalise.i18n-ally"
+      ],
+      "settings": {
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "always"
+        },
+        "editor.formatOnSave": true,
+        "[javascript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[typescript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[json]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[markdown]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        }
+      }
+    }
+  },
+  "postCreateCommand": "sudo chown -R node:node /workspaces || true; touch ~/.bashrc && echo \"alias dev=\\\"cd /workspaces/eslint-intl-vsix && yarn start \\\"\" >> ~/.bashrc"
+}

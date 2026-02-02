@@ -1,0 +1,21 @@
+{
+  "config.baseUrl": "OpenAI-compatible API Base URL",
+  "config.apiKey": "API Key",
+  "config.model": "Model name",
+  "config.enabled": "Enable/disable translation",
+  "config.targetLanguage": "Target language for translation",
+  "config.showOriginal": "Show original message below translation",
+  "command.clearCache": "Clear Translation Cache",
+  "command.toggleEnabled": "Toggle Translation",
+  "command.showOutput": "Show Output Log",
+  "lang.zh-CN": "Simplified Chinese (简体中文)",
+  "lang.zh-TW": "Traditional Chinese (繁體中文)",
+  "lang.ko": "Korean (한국어)",
+  "lang.de": "German (Deutsch)",
+  "lang.fr": "French (Français)",
+  "lang.es": "Spanish (Español)",
+  "lang.ru": "Russian (Русский)",
+  "lang.pt": "Portuguese (Português)",
+  "lang.it": "Italian (Italiano)",
+  "lang.ar": "Arabic (العربية)"
+}

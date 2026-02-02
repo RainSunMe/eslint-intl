@@ -1,0 +1,21 @@
+{
+  "config.baseUrl": "OpenAI 相容 API 基礎 URL",
+  "config.apiKey": "API 金鑰",
+  "config.model": "模型名稱",
+  "config.enabled": "啟用/停用翻譯",
+  "config.targetLanguage": "翻譯目標語言",
+  "config.showOriginal": "在翻譯下方顯示原文",
+  "command.clearCache": "清除翻譯快取",
+  "command.toggleEnabled": "切換翻譯",
+  "command.showOutput": "顯示輸出日誌",
+  "lang.zh-CN": "简体中文",
+  "lang.zh-TW": "繁體中文",
+  "lang.ko": "한국어",
+  "lang.de": "Deutsch",
+  "lang.fr": "Français",
+  "lang.es": "Español",
+  "lang.ru": "Русский",
+  "lang.pt": "Português",
+  "lang.it": "Italiano",
+  "lang.ar": "العربية"
+}

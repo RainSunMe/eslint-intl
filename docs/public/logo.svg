@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366F1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Circle -->
+  <circle cx="64" cy="64" r="60" fill="url(#bgGrad)" />
+
+  <!-- ESLint Shield Base -->
+  <path d="M 64 22 L 90 36 L 90 64 L 64 78 L 38 64 L 38 36 Z" fill="#4338CA" opacity="0.3" />
+
+  <!-- Globe Structure -->
+  <circle cx="64" cy="64" r="32" fill="none" stroke="white" stroke-width="3.5" opacity="0.95" />
+
+  <!-- Meridian Lines -->
+  <ellipse cx="64" cy="64" rx="14" ry="32" fill="none" stroke="white" stroke-width="2.5" opacity="0.85" />
+  <ellipse cx="64" cy="64" rx="32" ry="16" fill="none" stroke="white" stroke-width="2.5" opacity="0.85" />
+
+  <!-- Center Hexagon (ESLint symbol) -->
+  <path d="M 64 50 L 72 54 L 72 62 L 64 66 L 56 62 L 56 54 Z" fill="white" opacity="0.95" />
+
+  <!-- Translation Arrows -->
+  <g opacity="0.95">
+    <!-- Left Arrow -->
+    <path d="M 28 50 L 34 50 M 28 50 L 31 47 M 28 50 L 31 53" stroke="#FFD700" stroke-width="3" stroke-linecap="round"
+      fill="none" />
+    <!-- Right Arrow -->
+    <path d="M 100 78 L 94 78 M 100 78 L 97 75 M 100 78 L 97 81" stroke="#FFD700" stroke-width="3"
+      stroke-linecap="round" fill="none" />
+  </g>
+
+  <!-- Language Indicators -->
+  <circle cx="44" cy="44" r="3.5" fill="#FFD700" opacity="0.9" />
+  <circle cx="84" cy="84" r="3.5" fill="#FFD700" opacity="0.9" />
+</svg>

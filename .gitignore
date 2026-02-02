@@ -1,0 +1,8 @@
+out/
+node_modules/
+.vscode-test/
+*.vsix
+!releases/*.vsix
+
+# VitePress 构建输出
+docs/.vitepress/dist

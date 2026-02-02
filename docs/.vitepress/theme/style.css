@@ -1,0 +1,58 @@
+/* 自定义主题颜色 */
+:root {
+  --vp-c-brand: #3c366b;
+  --vp-c-brand-light: #5a5380;
+  --vp-c-brand-lighter: #7b73a1;
+  --vp-c-brand-lightest: #9c94c1;
+  --vp-c-brand-dark: #2a2550;
+  --vp-c-brand-darker: #1a1a40;
+}
+
+/* 深色模式 */
+.dark {
+  --vp-c-bg: #0f0f1e;
+  --vp-c-bg-soft: #1a1a2e;
+  --vp-c-bg-mute: #262640;
+}
+
+/* 代码块样式 */
+.vp-code-block {
+  border-radius: 8px;
+}
+
+/* 自定义容器 */
+.vp-doc .custom-block {
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.vp-doc .custom-block.info {
+  background-color: #e7f1ff;
+  border-left: 4px solid #0066cc;
+}
+
+.vp-doc .custom-block.warning {
+  background-color: #fff7e6;
+  border-left: 4px solid #ff9800;
+}
+
+.vp-doc .custom-block.danger {
+  background-color: #ffe7e7;
+  border-left: 4px solid #ff3333;
+}
+
+.dark .vp-doc .custom-block.info {
+  background-color: #1a3a52;
+  border-left-color: #4d9cff;
+}
+
+.dark .vp-doc .custom-block.warning {
+  background-color: #4d3d1a;
+  border-left-color: #ffb84d;
+}
+
+.dark .vp-doc .custom-block.danger {
+  background-color: #4d1a1a;
+  border-left-color: #ff6666;
+}
