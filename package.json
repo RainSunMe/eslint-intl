@@ -2,7 +2,7 @@
   "name": "eslint-intl",
   "displayName": "ESLint Intl - AI Translator",
   "description": "AI-powered internationalization for ESLint error messages",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "RainSun",
   "icon": "logo.png",
   "homepage": "https://eslint-intl.vercel.app/",

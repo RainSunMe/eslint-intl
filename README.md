@@ -15,7 +15,7 @@
 
 Real-time translation support for **10 major languages**:
 
-- 🇨🇳 Simplified Chinese / 🇹🇼 Traditional Chinese
+- 🇨🇳 Simplified Chinese / Traditional Chinese
 - 🇰🇷 한국어 / 🇩🇪 Deutsch
 - 🇫🇷 Français / 🇪🇸 Español
 - 🇷🇺 Русский / 🇵🇹 Português
