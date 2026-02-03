@@ -115,6 +115,24 @@ jobs:
           git add package.json package-lock.json
           git commit -m "chore: bump version to ${{ steps.version.outputs.version }}"
       
+      - name: Generate changelog
+        id: changelog
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          # Get the last tag before creating the new tag
+          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          
+          if [ -z "$LAST_TAG" ]; then
+            CHANGELOG="Initial release"
+          else
+            # Get commits between last tag and current HEAD
+            CHANGELOG=$(git log $LAST_TAG..HEAD --pretty=format:"- %s (%h)" --no-merges)
+          fi
+          
+          # Save changelog to file for multiline output
+          echo "$CHANGELOG" > /tmp/changelog.txt
+          echo "Generated changelog for v$VERSION"
+      
       - name: Create and push tag
         run: |
           VERSION="${{ steps.version.outputs.version }}"
@@ -125,22 +143,6 @@ jobs:
           if [ "${{ steps.version.outputs.bump }}" != "none" ]; then
             git push origin ${{ github.ref_name }}
           fi
-      
-      - name: Generate changelog
-        id: changelog
-        run: |
-          VERSION="${{ steps.version.outputs.version }}"
-          LAST_TAG=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
-          
-          if [ -z "$LAST_TAG" ]; then
-            CHANGELOG="Initial release"
-          else
-            CHANGELOG=$(git log $LAST_TAG..HEAD --pretty=format:"- %s (%h)" --no-merges)
-          fi
-          
-          # Save changelog to file for multiline output
-          echo "$CHANGELOG" > /tmp/changelog.txt
-          echo "Generated changelog for v$VERSION"
       
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
