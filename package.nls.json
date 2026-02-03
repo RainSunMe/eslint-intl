@@ -8,6 +8,7 @@
   "command.clearCache": "Clear Translation Cache",
   "command.toggleEnabled": "Toggle Translation",
   "command.showOutput": "Show Output Log",
+  "command.retranslate": "Retranslate",
   "lang.zh-CN": "简体中文 (Simplified Chinese)",
   "lang.zh-TW": "繁體中文 (Traditional Chinese)",
   "lang.ko": "한국어 (Korean)",

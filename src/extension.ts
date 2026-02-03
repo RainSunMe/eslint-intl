@@ -97,6 +97,36 @@ export function activate(context: vscode.ExtensionContext) {
     ),
   );
 
+  // 注册命令：重新翻译
+  context.subscriptions.push(
+    vscode.commands.registerCommand(
+      `${CONFIG_PREFIX}.retranslate`,
+      async (message: string, ruleId?: string) => {
+        const config = vscode.workspace.getConfiguration(CONFIG_PREFIX);
+        const targetLang = config.get<string>("targetLanguage", "zh-CN");
+        const cacheKey = `${targetLang}:${message}`;
+        
+        // 清除缓存中的这条翻译
+        cache.delete(cacheKey);
+        
+        log(vscode.l10n.t("Retranslating: \"{0}\"", message.slice(0, 40) + (message.length > 40 ? "..." : "")));
+        
+        // 触发重新翻译
+        try {
+          await translator.translate(message, ruleId);
+          vscode.window.showInformationMessage(
+            `ESLint Intl: ${vscode.l10n.t("Retranslation complete")}`,
+          );
+        } catch (err) {
+          log(vscode.l10n.t("Translation failed: {0}", String(err)));
+          vscode.window.showErrorMessage(
+            `ESLint Intl: ${vscode.l10n.t("Retranslation failed")}`,
+          );
+        }
+      },
+    ),
+  );
+
   // 监听配置变化
   context.subscriptions.push(
     vscode.workspace.onDidChangeConfiguration((e) => {
@@ -152,6 +182,26 @@ function extractRuleId(diagnostic: vscode.Diagnostic): string | undefined {
   return undefined;
 }
 
+/**
+ * Strip markdown code block syntax from AI response
+ * Handles cases like:
+ * ```json\n{...}\n```
+ * ```{...}```
+ * ```\n{...}\n```
+ */
+function stripCodeBlock(text: string): string {
+  // Remove leading/trailing code block markers with optional language identifier
+  let cleaned = text.trim();
+  
+  // Pattern: ``` with any optional language identifier at the start
+  cleaned = cleaned.replace(/^```\w*\s*\n?/, "");
+  
+  // Pattern: ``` at the end
+  cleaned = cleaned.replace(/\n?```\s*$/, "");
+  
+  return cleaned.trim();
+}
+
 class ESLintIntlHoverProvider implements vscode.HoverProvider {
   async provideHover(
     document: vscode.TextDocument,
@@ -202,7 +252,9 @@ class ESLintIntlHoverProvider implements vscode.HoverProvider {
         let translationText = translated;
         let fixSuggestion = "";
         try {
-          const parsed = JSON.parse(translated);
+          // Strip markdown code blocks before parsing JSON
+          const cleanedTranslation = stripCodeBlock(translated);
+          const parsed = JSON.parse(cleanedTranslation);
           if (parsed.translation) {
             translationText = parsed.translation;
           }
@@ -224,6 +276,14 @@ class ESLintIntlHoverProvider implements vscode.HoverProvider {
             `\n\n<span style="color:#4a9;\">💡 ${fixSuggestion}</span>`,
           );
         }
+
+        // 添加重新翻译按钮
+        const retranslateCommand = vscode.Uri.parse(
+          `command:${CONFIG_PREFIX}.retranslate?${encodeURIComponent(JSON.stringify([originalMessage, ruleId]))}`,
+        );
+        md.appendMarkdown(
+          `\n\n[$(refresh) ${vscode.l10n.t("Retranslate")}](${retranslateCommand})`,
+        );
 
         // 可选显示原文
         if (config.get<boolean>("showOriginal", false)) {
