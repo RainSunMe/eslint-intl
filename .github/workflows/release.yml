@@ -55,16 +55,19 @@ jobs:
             echo "First release detected, version: $CURRENT_VERSION"
           else
             # Get commits since last tag
-            COMMITS=$(git log $LAST_TAG..HEAD --pretty=format:"%s")
+            COMMITS=$(git log $LAST_TAG..HEAD --pretty=format:"%s%n%b")
             
             # Determine bump type based on conventional commits
-            if echo "$COMMITS" | grep -qE "^(BREAKING CHANGE:|feat!:|fix!:)"; then
+            # Check for breaking changes: BREAKING CHANGE in body or ! suffix on type
+            if echo "$COMMITS" | grep -qE "BREAKING CHANGE:" || echo "$COMMITS" | grep -qE "^(feat|fix)!(\(.+\))?:"; then
               BUMP_TYPE="major"
             elif echo "$COMMITS" | grep -qE "^feat(\(.+\))?:"; then
               BUMP_TYPE="minor"
             elif echo "$COMMITS" | grep -qE "^fix(\(.+\))?:"; then
               BUMP_TYPE="patch"
             else
+              # No recognized conventional commit pattern - default to patch for any changes
+              # This includes chore, docs, style, refactor, perf, test, build, ci, etc.
               BUMP_TYPE="patch"
             fi
             
@@ -115,6 +118,10 @@ jobs:
           git add package.json package-lock.json
           git commit -m "chore: bump version to ${{ steps.version.outputs.version }}"
       
+      - name: Push version bump
+        if: steps.version.outputs.bump != 'none'
+        run: git push origin ${{ github.ref_name }}
+      
       - name: Generate changelog
         id: changelog
         run: |
@@ -138,11 +145,6 @@ jobs:
           VERSION="${{ steps.version.outputs.version }}"
           git tag -a "v$VERSION" -m "Release v$VERSION"
           git push origin "v$VERSION"
-          
-          # Push the version bump commit if it exists
-          if [ "${{ steps.version.outputs.bump }}" != "none" ]; then
-            git push origin ${{ github.ref_name }}
-          fi
       
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
