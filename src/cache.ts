@@ -61,6 +61,11 @@ export class TranslationCache {
     return this.memoryCache.has(message)
   }
 
+  delete(message: string): void {
+    this.memoryCache.delete(message)
+    this.saveToStorage()
+  }
+
   clear(): void {
     this.memoryCache.clear()
     this.globalState.update(CACHE_KEY, {})

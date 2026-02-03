@@ -112,6 +112,11 @@
         "command": "eslintIntl.showOutput",
         "title": "%command.showOutput%",
         "category": "ESLint Intl"
+      },
+      {
+        "command": "eslintIntl.retranslate",
+        "title": "%command.retranslate%",
+        "category": "ESLint Intl"
       }
     ]
   },

@@ -8,6 +8,7 @@
   "command.clearCache": "清除翻譯快取",
   "command.toggleEnabled": "切換翻譯",
   "command.showOutput": "顯示輸出日誌",
+  "command.retranslate": "重新翻譯",
   "lang.zh-CN": "简体中文",
   "lang.zh-TW": "繁體中文",
   "lang.ko": "한국어",
