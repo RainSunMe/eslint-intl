@@ -55,16 +55,16 @@ Before installing ESLint Intl, make sure:
 
 In VS Code Settings, find `eslintIntl.targetLanguage` and select your preferred language:
 
-- Simplified Chinese (zh-CN)
-- Traditional Chinese (zh-TW)
-- Korean (ko)
-- German (de)
-- French (fr)
-- Spanish (es)
-- Russian (ru)
-- Portuguese (pt)
-- Italian (it)
-- Arabic (ar)
+- 简体中文 (zh-CN)
+- 繁體中文 (zh-TW)
+- 한국어 (ko)
+- Deutsch (de)
+- Français (fr)
+- Español (es)
+- Русский (ru)
+- Português (pt)
+- Italiano (it)
+- العربية (ar)
 
 ### Step 3: Enable the Extension
 
