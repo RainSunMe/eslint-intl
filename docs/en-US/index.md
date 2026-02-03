@@ -19,7 +19,7 @@ hero:
 features:
   - icon: 🌍
     title: Support for 10 Languages
-    details: Simplified Chinese, Traditional Chinese, Korean, German, French, Spanish, Russian, Portuguese, Italian, Arabic
+    details: 简体中文, 繁體中文, 한국어, Deutsch, Français, Español, Русский, Português, Italiano, العربية
 
   - icon: 💡
     title: Smart Fix Suggestions
