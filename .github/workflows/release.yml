@@ -1,0 +1,159 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - master
+      - main
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
+      - 'LICENSE'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run linter
+        run: npm run lint
+      
+      - name: Compile TypeScript
+        run: npm run compile
+      
+      - name: Install VSCE
+        run: npm install -g @vscode/vsce
+      
+      - name: Determine version bump
+        id: version
+        run: |
+          # Get commit messages since last tag
+          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          
+          if [ -z "$LAST_TAG" ]; then
+            # First release, use current version and create tag
+            CURRENT_VERSION=$(node -p "require('./package.json').version")
+            echo "bump=none" >> $GITHUB_OUTPUT
+            echo "version=$CURRENT_VERSION" >> $GITHUB_OUTPUT
+            echo "First release detected, version: $CURRENT_VERSION"
+          else
+            # Get commits since last tag
+            COMMITS=$(git log $LAST_TAG..HEAD --pretty=format:"%s%n%b")
+            
+            # Determine bump type based on conventional commits
+            # Check for breaking changes: BREAKING CHANGE in body or ! suffix on type
+            if echo "$COMMITS" | grep -qE "BREAKING CHANGE:" || echo "$COMMITS" | grep -qE "^(feat|fix)!(\(.+\))?:"; then
+              BUMP_TYPE="major"
+            elif echo "$COMMITS" | grep -qE "^feat(\(.+\))?:"; then
+              BUMP_TYPE="minor"
+            elif echo "$COMMITS" | grep -qE "^fix(\(.+\))?:"; then
+              BUMP_TYPE="patch"
+            else
+              # No recognized conventional commit pattern - default to patch for any changes
+              # This includes chore, docs, style, refactor, perf, test, build, ci, etc.
+              BUMP_TYPE="patch"
+            fi
+            
+            echo "bump=$BUMP_TYPE" >> $GITHUB_OUTPUT
+            
+            # Get current version and bump it
+            CURRENT_VERSION=$(node -p "require('./package.json').version")
+            IFS='.' read -r major minor patch <<< "$CURRENT_VERSION"
+            
+            case $BUMP_TYPE in
+              major)
+                NEW_VERSION="$((major + 1)).0.0"
+                ;;
+              minor)
+                NEW_VERSION="$major.$((minor + 1)).0"
+                ;;
+              patch)
+                NEW_VERSION="$major.$minor.$((patch + 1))"
+                ;;
+            esac
+            
+            echo "version=$NEW_VERSION" >> $GITHUB_OUTPUT
+            echo "Version bump: $CURRENT_VERSION -> $NEW_VERSION (type: $BUMP_TYPE)"
+          fi
+      
+      - name: Update package.json version
+        if: steps.version.outputs.bump != 'none'
+        run: |
+          NEW_VERSION="${{ steps.version.outputs.version }}"
+          npm version $NEW_VERSION --no-git-tag-version
+          echo "Updated package.json to version $NEW_VERSION"
+      
+      - name: Package VSIX
+        run: vsce package --no-dependencies
+      
+      - name: Get VSIX filename
+        id: vsix
+        run: |
+          VSIX_FILE=$(ls *.vsix | head -n 1)
+          echo "filename=$VSIX_FILE" >> $GITHUB_OUTPUT
+          echo "Found VSIX file: $VSIX_FILE"
+      
+      - name: Commit version bump
+        if: steps.version.outputs.bump != 'none'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add package.json package-lock.json
+          git commit -m "chore: bump version to ${{ steps.version.outputs.version }}"
+      
+      - name: Push version bump
+        if: steps.version.outputs.bump != 'none'
+        run: git push origin ${{ github.ref_name }}
+      
+      - name: Generate changelog
+        id: changelog
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          # Get the last tag before creating the new tag
+          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          
+          if [ -z "$LAST_TAG" ]; then
+            CHANGELOG="Initial release"
+          else
+            # Get commits between last tag and current HEAD
+            CHANGELOG=$(git log $LAST_TAG..HEAD --pretty=format:"- %s (%h)" --no-merges)
+          fi
+          
+          # Save changelog to file for multiline output
+          echo "$CHANGELOG" > /tmp/changelog.txt
+          echo "Generated changelog for v$VERSION"
+      
+      - name: Create and push tag
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          git tag -a "v$VERSION" -m "Release v$VERSION"
+          git push origin "v$VERSION"
+      
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ steps.version.outputs.version }}
+          name: Release v${{ steps.version.outputs.version }}
+          body_path: /tmp/changelog.txt
+          files: ${{ steps.vsix.outputs.filename }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
