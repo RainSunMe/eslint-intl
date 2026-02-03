@@ -109,7 +109,7 @@ export function activate(context: vscode.ExtensionContext) {
         // 清除缓存中的这条翻译
         cache.delete(cacheKey);
         
-        log(vscode.l10n.t("Retranslating: \"{0}\"", message.slice(0, 40) + "..."));
+        log(vscode.l10n.t("Retranslating: \"{0}\"", message.slice(0, 40) + (message.length > 40 ? "..." : "")));
         
         // 触发重新翻译
         try {
@@ -193,8 +193,8 @@ function stripCodeBlock(text: string): string {
   // Remove leading/trailing code block markers with optional language identifier
   let cleaned = text.trim();
   
-  // Pattern: ```json or ``` at the start
-  cleaned = cleaned.replace(/^```(?:json)?\s*\n?/i, "");
+  // Pattern: ``` with any optional language identifier at the start
+  cleaned = cleaned.replace(/^```\w*\s*\n?/, "");
   
   // Pattern: ``` at the end
   cleaned = cleaned.replace(/\n?```\s*$/, "");
